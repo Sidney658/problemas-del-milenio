@@ -1,0 +1,172 @@
+:root {
+  --color-primary: #6C63FF;       /* Violeta brillante */
+  --color-secondary: #FF6584;     /* Rosa coral */
+  --color-accent: #42E2B8;        /* Turquesa brillante */
+  --color-dark: #2F2E41;          /* Azul oscuro */
+  --color-light: #F8F9FA;         /* Blanco suave */
+  --color-warning: #FFC107;       /* Amarillo dorado */
+  --color-info: #17A2B8;          /* Azul cielo */
+  --color-success: #28A745;       /* Verde fresco */
+  --color-danger: #FF4D6D;        /* Rojo coral */
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fafafa;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)) !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary)),
+              url('https://images.unsplash.com/photo-1635070041078-e363dbe005cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  background-size: cover;
+  background-blend-mode: overlay;
+  padding: 120px 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+}
+
+/* Cards */
+.problem-card {
+  transition: all 0.3s ease;
+  border: none;
+  border-radius: 12px !important;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  margin-bottom: 20px;
+}
+
+.problem-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.card-header {
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* Color coding for problems */
+.P-vs-NP { background-color: var(--color-primary) !important; }
+.Hodge { background-color: var(--color-secondary) !important; }
+.Poincare { background-color: var(--color-danger) !important; }
+.Riemann { background-color: var(--color-warning) !important; color: #333 !important; }
+.Yang-Mills { background-color: var(--color-info) !important; }
+.Navier-Stokes { background-color: var(--color-accent) !important; color: #333 !important; }
+.Birch { background-color: var(--color-dark) !important; }
+
+/* Badges */
+.badge {
+  font-weight: 500;
+  padding: 6px 10px;
+  border-radius: 20px;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--color-primary);
+  border: none;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+.btn-outline-light {
+  border: 2px solid white;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+/* Section titles */
+.section-title {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 15px;
+  color: var(--color-dark);
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  border-radius: 2px;
+}
+
+/* Table styling */
+.table {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.table thead th {
+  background-color: var(--color-primary);
+  color: white;
+  font-weight: 500;
+}
+
+/* Modal styling */
+.modal-header {
+  color: white;
+  border-bottom: none;
+}
+
+/* Footer */
+footer {
+  background: linear-gradient(135deg, var(--color-dark), #1a1a2e);
+  color: white;
+}
+
+.social-links a {
+  color: white;
+  font-size: 1.2rem;
+  margin-right: 15px;
+  transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+  color: var(--color-accent);
+  transform: translateY(-3px);
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+.math-icon {
+  font-size: 2rem;
+  color: var(--color-primary);
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 80px 0;
+  }
+  
+  .section-title:after {
+    width: 40px;
+  }
+}
